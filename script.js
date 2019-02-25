@@ -17,7 +17,7 @@ function setGradient() {
     ";<br>background: -moz-" + style +
     ";<br>background: -webkit-" + style +
     ";<br>background: -ms-" + style +
-    "<br>background: -0-" + style + ";";
+    "<br>background: -o-" + style + ";";
 }
 
 color1.addEventListener("input", setGradient);
@@ -35,6 +35,6 @@ document.body.onkeyup = function (e) {
 counter = 0;
 function toggleElement() {
   const text = document.querySelector(".text");
-  (counter % 2) == 0 ? text.style.display = "none" : text.style.display = "block";
+  (counter % 2) == 0 ? text.style.opacity = "0" : text.style.opacity = "1";
   counter++;
 }
