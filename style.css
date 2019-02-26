@@ -23,6 +23,10 @@ input[type="color"] {
   -webkit-transition: background-color 200ms ease-out;
 }
 
+.dark-mode input[type="color"] {
+  background-color: #282C34;
+}
+
 .t-small {
   font-size: 0.8em;
 }
@@ -81,4 +85,13 @@ ul {
 .mode-indicator {
   text-align: right;
   margin: 0;
+}
+
+.dark-mode {
+  background-color: #20232A;
+  color: white;
+}
+
+.dark-mode .code {
+  background-color: #282C34;
 }

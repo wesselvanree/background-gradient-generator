@@ -31,6 +31,8 @@ document.body.onkeyup = function (e) {
     toggleVisibility();
   } if (e.keyCode === 70) {
     toggleFullScreen();
+  } if (e.key == "d") {
+    toggleDarkMode();
   }
 }
 
@@ -50,4 +52,13 @@ function toggleFullScreen() {
       document.exitFullscreen();
     }
   }
+}
+
+darkCounter = 0;
+function toggleDarkMode() {
+  text = document.querySelector(".text");
+  modeIndicator = document.querySelector(".mode-indicator");
+  (darkCounter % 2) == 0 ? text.classList.remove("dark-mode") : text.classList.add("dark-mode");
+  text.classList.contains("dark-mode") ? modeIndicator.innerHTML = "Dark Mode" : modeIndicator.innerHTML = "Light Mode"
+  darkCounter++;
 }
