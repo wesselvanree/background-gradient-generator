@@ -3,7 +3,7 @@ body {
   height: 100vh;
   width: 100vw;
   display: flex;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-weight: 500;
   background: #903374;
   background: linear-gradient(to right, rgb(144, 51, 116), rgb(214, 56, 19));
@@ -13,16 +13,34 @@ body {
   background: -o-linear-gradient(to right, rgb(144, 51, 116), rgb(214, 56, 19));
 }
 
+input[type="color"] {
+  border: 0;
+  background-color: #f2f2f2;
+  outline: none;
+  transition: background-color 200ms ease-out;
+  -o-transition: background-color 200ms ease-out;
+  -moz-transition: background-color 200ms ease-out;
+  -webkit-transition: background-color 200ms ease-out;
+}
+
+.t-small {
+  font-size: 0.8em;
+}
+
 .text {
   padding: 40px;
   margin: auto;
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
   text-align: center;
-  width: 600px;
   background-color: rgb(255, 255, 255);
-  transition: opacity 200ms;
-  -o-transition: opacity 200ms;
-  -moz-transition: opacity 200ms;
-  -webkit-transition: opacity 200ms;
+  color: #2c2f36;
+  transition: opacity 200ms, background-color 200ms ease-out, color 200ms ease-out;
+  -o-transition: opacity 200ms, background-color 200ms ease-out, color 200ms ease-out;
+  -moz-transition: opacity 200ms, background-color 200ms ease-out, color 200ms ease-out;
+  -webkit-transition: opacity 200ms, background-color 200ms ease-out, color 200ms ease-out;
 }
 
 .code {
@@ -31,9 +49,36 @@ body {
   padding: 20px;
   background-color: #f2f2f2;
   text-align: left;
+  transition: background-color 200ms ease-out;
+  -o-transition: background-color 200ms ease-out;
+  -moz-transition: background-color 200ms ease-out;
+  -webkit-transition: background-color 200ms ease-out;
 }
 
 .code-p {
   text-align: left;
   margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.tl {
+  text-align: left;
+}
+
+.mt1 {
+  margin-top: 10px;
+}
+
+.mt2 {
+  margin-top: 40px;
+}
+
+ul {
+  text-align: left;
+  margin-top: 0;
+}
+
+.mode-indicator {
+  text-align: right;
+  margin: 0;
 }

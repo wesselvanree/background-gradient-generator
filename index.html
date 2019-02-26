@@ -7,10 +7,9 @@
   <title>Gradient Generator</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="text">
+<body id="body">
+  <div class="text dark-mode">
     <h2>Pick your colors</h2>
-    <p>Press 'H' to hide or show this element.</p>
     <div class="input">
       <input class="color1" type="color" name="color1" value="#903374">
       <input class="color2" type="color" name="color2" value="#d63813">
@@ -24,6 +23,11 @@
       background: -ms-linear-gradient(to right, rgb(144, 51, 116), rgb(214, 56, 19));<br>
       background: -o-linear-gradient(to right, rgb(144, 51, 116), rgb(214, 56, 19));<br>
     </div>
+    <p class="tl mt2 t-small">
+      'F' : fullscreen<br>
+      'H' : hide/show
+    </p>
+    <p class="mode-indicator t-small">Light Mode</p>
   </div>
 
   <script src="script.js"></script>

@@ -24,17 +24,30 @@ color1.addEventListener("input", setGradient);
 color2.addEventListener("input", setGradient);
 
 
-
-// spacebar code
+// keypress event
 document.body.onkeyup = function (e) {
-  if (e.keyCode == 72) {
-    toggleElement();
+  console.log(e);
+  if (e.keyCode === 72) {
+    toggleVisibility();
+  } if (e.keyCode === 70) {
+    toggleFullScreen();
   }
 }
 
-counter = 0;
-function toggleElement() {
+
+fadeCounter = 0;
+function toggleVisibility() {
   const text = document.querySelector(".text");
-  (counter % 2) == 0 ? text.style.opacity = "0" : text.style.opacity = "1";
-  counter++;
+  (fadeCounter % 2) == 0 ? text.style.opacity = "0" : text.style.opacity = "1";
+  fadeCounter++;
+}
+
+function toggleFullScreen() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
 }
