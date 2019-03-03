@@ -17,7 +17,7 @@ function setGradient() {
     ";<br>background: -moz-" + style +
     ";<br>background: -webkit-" + style +
     ";<br>background: -ms-" + style +
-    "<br>background: -o-" + style + ";";
+    ";<br>background: -o-" + style + ";";
 }
 
 color1.addEventListener("input", setGradient);
